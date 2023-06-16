@@ -41,7 +41,7 @@ const PaymentHistory = () => {
                                     <div className="flex items-center space-x-3">
                                         <div className="avatar">
                                             <div className="mask mask-squircle w-12 h-12">
-                                                <img src={myPaymentHistory.image} alt="Avatar Tailwind CSS Component" />
+                                                <img src={myPaymentHistory.classImage} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
                                         <div>

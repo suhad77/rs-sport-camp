@@ -1,6 +1,6 @@
 import  { useContext, useState } from 'react';
 import Lottie from 'lottie-react';
-import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import reg from '../../../assets/register.json';
@@ -47,7 +47,7 @@ const Register = () => {
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email, photo: data.photoURL }
                         console.log(saveUser);
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://rs-sport-camp-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'

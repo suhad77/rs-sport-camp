@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (loggedUser) {
-                axios.post('http://localhost:5000/jwt', { email: loggedUser.email })
+                axios.post('https://rs-sport-camp-server.vercel.app/jwt', { email: loggedUser.email })
                     .then(data => {
                         // console.log(data.data.token)
                         localStorage.setItem('access-token', data.data.token)
@@ -67,20 +67,6 @@ const AuthProvider = ({ children }) => {
             unsubscribe();
         }
     }, [])
-
-    // const updateUserProfile = (user, name, url) => {
-    //     updateProfile(user, {
-    //         displayName: name,
-    //         photoURL: url
-    //     })
-    //         .then(() => {
-    //             console.log('User Updated');
-    //             setPhoto(url)
-    //         })
-    //         .catch((error) => {
-    //             console.log(error.message);
-    //         });
-    // }
 
     const updateUserProfile = (name, photo) => {
         return updateProfile(auth.currentUser, {

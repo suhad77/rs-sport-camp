@@ -37,7 +37,7 @@ const ClassItem = ({ cls }) => {
         let email = user?.email;
         const selectedClass = { classId: _id, email, classImage, className, instructorName, availableSeats, price }
 
-        fetch('http://localhost:5000/selectedClasses', {
+        fetch('https://rs-sport-camp-server.vercel.app/selectedClasses', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

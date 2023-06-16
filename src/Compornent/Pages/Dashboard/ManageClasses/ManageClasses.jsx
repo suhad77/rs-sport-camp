@@ -7,13 +7,13 @@ import { Helmet } from 'react-helmet';
 
 const ManageClasses = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await axios.get('http://localhost:5000/classes')
+        const res = await axios.get('https://rs-sport-camp-server.vercel.app/classes')
         return res.data;
     })
     console.log(classes);
 
     const handleApprove = (cls) => {
-        fetch(`http://localhost:5000/classes/approve/${cls._id}`, {
+        fetch(`https://rs-sport-camp-server.vercel.app/classes/approve/${cls._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const ManageClasses = () => {
     };
 
     const handleDeny = (cls) => {
-        fetch(`http://localhost:5000/classes/deny/${cls._id}`, {
+        fetch(`https://rs-sport-camp-server.vercel.app/classes/deny/${cls._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ const ManageClasses = () => {
         const form = event.target;
         const feedback = form.feedback.value;
 
-        fetch(`http://localhost:5000/classes/feedback/${cls._id}`, {
+        fetch(`https://rs-sport-camp-server.vercel.app/classes/feedback/${cls._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

@@ -46,7 +46,7 @@ const Login = () => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email, photo: loggedInUser.photoURL }
-                fetch('http://localhost:5000/users', {
+                fetch('https://rs-sport-camp-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -66,7 +66,7 @@ const Login = () => {
 
                 console.log(githubUser);
                 const saveUser = { name: githubUser.displayName, email: githubUser.email, photo: githubUser.photoURL }
-                fetch('http://localhost:5000/users', {
+                fetch('https://rs-sport-camp-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
