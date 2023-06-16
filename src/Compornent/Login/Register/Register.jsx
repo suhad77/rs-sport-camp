@@ -143,7 +143,8 @@ const Register = () => {
                                                 minLength: 6,
                                                 maxLength: 20,
                                                 pattern: /(?=.*[A-Z])/,
-                                                pattern1: /(?=.*[!@#$&*])/
+                                                pattern1: /(?=.*[!@#$&*])/,
+                                                pattern2: /(?=.*[a-z])/,
                                             })} placeholder="Confirm Password" className="input input-bordered border-[#d2d4d7] w-full h-full bg-transparent" required />
                                             {showConfirm ? <FaEyeSlash className='text-sky-600 absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer' onClick={toggleShowConfirm} /> : <FaEye className='text-sky-600 absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer' onClick={toggleShowConfirm} />}
                                         </div>
@@ -152,6 +153,7 @@ const Register = () => {
                                         {errors.confirm?.type === 'maxLength' && <p className="text-red-600">Password must be less than 20 characters</p>}
                                         {errors.confirm?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase</p>}
                                         {errors.confirm?.type === 'pattern1' && <p className="text-red-600">Password must have one Special Character</p>}
+                                        {errors.confirm?.type === 'pattern2' && <p className="text-red-600">Password must have one Lowercase</p>}
                                         <p className="text-red-600">{notMatch}</p>
                                     </div>
                                 </div>
