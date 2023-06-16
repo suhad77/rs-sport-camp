@@ -5,17 +5,13 @@ import { FaCashRegister, FaHistory, FaPlusSquare, FaRegBookmark, FaTachometerAlt
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { Helmet } from 'react-helmet';
-import Title from '../../Title/Title';
 import Header from '../../Shared/Header/Header';
 
 
 const Dashboard = () => {
-    // useTitle('Dashboard')
     const { user } = useContext(AuthContext);
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
-    // const isAdmin = true;
-    // const isInstructor = true;
 
     const userProfile = <div className='flex flex-col items-center mx-auto'>
         <div className="avatar">

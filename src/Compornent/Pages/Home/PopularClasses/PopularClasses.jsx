@@ -5,7 +5,7 @@ import Title from '../../../Title/Title';
 
 const PopularInstructor = () => {
     const [axiosSecure] = useAxiosSecure();
-    const { data: classes = [], refetch } = useQuery(['classes'], async () => {
+    const { data: classes = [] } = useQuery(['classes'], async () => {
         const res = await axiosSecure.get('/classes')
         return res.data;
     })
