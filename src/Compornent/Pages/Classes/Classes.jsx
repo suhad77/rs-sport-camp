@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import ClassItem from './ClassItem';
+import Title from '../../Title/Title';
 
 const Classes = () => {
-    // useTitle('Classes')
+    
     const [classes, setClasses] = useState([]);
 
     useEffect(() => {
@@ -13,7 +14,7 @@ const Classes = () => {
 
     return (
             <div className='my-12'>
-                {/* <Title title='All Classes'></Title> */}
+                <Title title='All Classes'></Title>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
                         classes.map(cls => <ClassItem
