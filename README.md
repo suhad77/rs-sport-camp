@@ -7,7 +7,7 @@
 
 * The home page has a slider at the top, Paul's classes, popular instructors, and student count sections below the slider. bottom footer
 
-* 
+* The dashboard is designed separately according to the user like for admin only Manage User and Manage Classes page and for Instructor Add a Class and My Classes page and for Student Enroll Class Selected Class and Payment History page
 
 * 
 
