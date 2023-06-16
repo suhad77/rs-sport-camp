@@ -9,6 +9,16 @@
 
 * The dashboard is designed separately according to the user like for admin only Manage User and Manage Classes page and for Instructor Add a Class and My Classes page and for Student Enroll Class Selected Class and Payment History page
 
-* 
+* All class and sub-instructor data is shown on the Class and Instructor page
+
+
+* Used packages/ technology name: 1. react-hook-form 
+        2. JWT token 
+        3. use Axios
+        3. Use tanstack query 
+        4. swiper slider
+        5.fontawasome icon
+        6. Lottie animation 
+        7. stripe and etc
 
 * Live website Link: 
