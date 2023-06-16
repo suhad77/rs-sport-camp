@@ -1,7 +1,7 @@
 import PopularInstructor from "../PopularInstructor/PopularInstructor";
 import Slider from "../Slider/Slider";
 import PopularClasses from "../PopularClasses/PopularClasses"
-import NewsLetter from "../NewsLetter/NewsLetter";
+import StudentCount from "../StudentCount/StudentCount";
 import {Helmet} from "react-helmet";
 
 
@@ -14,7 +14,7 @@ const Home = () => {
             <Slider></Slider>
             <PopularClasses></PopularClasses>
             <PopularInstructor />
-            <NewsLetter />
+            <StudentCount />
         </div>
     );
 };

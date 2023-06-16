@@ -1,11 +1,11 @@
 import Title from "../../../Title/Title";
 import CountUp from 'react-countup';
 
-const NewsLetter = () => {
+const StudentCount = () => {
     return (
         <div>
             <Title title='Student Count'></Title>
-        <div className="bg-slate-300 w-[60%] mx-auto my-12 rounded-lg">
+        <div className="bg-slate-300 md:w-[60%] mx-auto my-12 rounded-lg">
             <h2 className="text-center text-3xl py-6">Student</h2>
             <div className="grid grid-flow-col gap-5 text-center pb-6">
                 <div className="flex flex-col">
@@ -26,4 +26,4 @@ const NewsLetter = () => {
     );
 };
 
-export default NewsLetter;
+export default StudentCount;

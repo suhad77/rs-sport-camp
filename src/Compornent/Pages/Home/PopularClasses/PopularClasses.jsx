@@ -14,7 +14,7 @@ const PopularInstructor = () => {
     return (
         <div className='my-12'>
             <Title title='Popular Class'></Title>
-            <div className='grid grid-cols-3 gap-4 mx-auto'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols gap-4 mx-auto'>
                 {
                     classes.slice(0, 6).map(classes => <div key={classes._id} className="card w-96 bg-slate-50 shadow-xl mx-auto">
                         <figure className="px-10 pt-10">
