@@ -5,6 +5,8 @@ import { FaCashRegister, FaHistory, FaPlusSquare, FaRegBookmark, FaTachometerAlt
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { Helmet } from 'react-helmet';
+import Title from '../../Title/Title';
+import Header from '../../Shared/Header/Header';
 
 
 const Dashboard = () => {
@@ -30,6 +32,7 @@ const Dashboard = () => {
             <Helmet>
                 <title>RsSportClub || Dashboard</title>
             </Helmet>
+            <Header />
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
