@@ -1,8 +1,8 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom";
-import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../../Provider/AuthProvider";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 const Checkout = ({ selectedClass, closeModal }) => {
@@ -82,7 +82,7 @@ const Checkout = ({ selectedClass, closeModal }) => {
                 date: new Date(),
                 id: selectedClass._id,
                 classId: selectedClass.classId,
-                image: selectedClass.image,
+                classImage: selectedClass.classImage,
                 status: 'Payment Successful',
                 className: selectedClass.className,
                 instructorName: selectedClass.instructorName

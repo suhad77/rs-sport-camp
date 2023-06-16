@@ -8,21 +8,13 @@ import SelectedClass from './SelectedClass';
 
 
 const SelectedClasses = () => {
-    // const [selectedClasses, setSelectedClasses] = useState([]);
     const { user } = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure();
     const { data: selectedClasses = [], refetch } = useQuery(['selectedClasses'], async () => {
         const res = await axiosSecure.get(`/selectedClasses?email=${user?.email}`)
         return res.data;
     })
-    console.log(selectedClasses);
 
-
-    // useEffect(() => {
-    //     axios.get(`https://b7a12-summer-camp-server-side-tanvirmdahmed.vercel.app/selectedClasses?email=${user?.email}`)
-    //         .then(data => setSelectedClasses(data.data))
-    // }, [])
-    // console.log(selectedClasses);
 
 
     const handleDelete = _id => {
@@ -48,8 +40,6 @@ const SelectedClasses = () => {
                                 'Your selected class has been deleted.',
                                 'success'
                             )
-                            // const remaining = selectedClasses.filter(selectedClass => selectedClass._id !== _id);
-                            // setSelectedClasses(remaining);
                             refetch()
                         }
                     })
@@ -66,6 +56,7 @@ const SelectedClasses = () => {
                     <thead>
                         <tr className='text-lg bg-amber-50 text-center'>
                             <th>SL No.</th>
+                            <th>Image</th>
                             <th>Class Name</th>
                             <th>Instructor Name</th>
                             <th>Price</th>

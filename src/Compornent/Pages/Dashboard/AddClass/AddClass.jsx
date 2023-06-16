@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../../Provider/AuthProvider';
+import Title from '../../../Title/Title';
 
 const AddClass = () => {
     // useTitle('Dashboard | Add Class')
@@ -24,7 +25,7 @@ const AddClass = () => {
         console.log(newClass);
 
         // send data to the server
-        fetch('http://localhost:5000//classes', {
+        fetch('http://localhost:5000/classes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +49,7 @@ const AddClass = () => {
 
     return (
         <div className="px-16 my-12">
-            {/* <Title title='Add a Class'></Title> */}
+            <Title title='Add a Class'></Title>
             <form onSubmit={handleAddClass}>
                 {/* form class name and image row */}
                 <div className="md:flex mb-8">

@@ -23,8 +23,6 @@ const ClassItem = ({ cls }) => {
 
     });
 
-    console.log(selectedClasses);
-
     const { _id, className, classImage, instructorName, availableSeats, price } = cls;
 
     const alreadyExist = selectedClasses.find(selectedClass => selectedClass.classId === cls._id);

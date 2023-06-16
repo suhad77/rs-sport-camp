@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
-        const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const menu = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
-        {
-            user && <Link to='/dashboard'>Dashboard</Link>
-        }
+        <li>
+            {
+                user && <Link to='/dashboard'>Dashboard</Link>
+            }
+        </li>
     </>
 
 
@@ -46,7 +48,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    {user ? <Link className="btn " onClick={handleLogOut}>Log Out</Link>: <li><Link to='/login'>Login</Link></li>}
+                    {user ? <Link className="btn " onClick={handleLogOut}>Log Out</Link> : <li><Link to='/login'>Login</Link></li>}
                 </div>
             </div>
         </div >

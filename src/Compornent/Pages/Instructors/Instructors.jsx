@@ -1,6 +1,7 @@
 // import  { useEffect, useState } from 'react';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import Title from '../../Title/Title';
 
 const Instructors = () => {
     // useTitle('Instructors')
@@ -16,8 +17,7 @@ const Instructors = () => {
 
     return (
         <div className='my-12'>
-            {/* <Title title='All Instructors'></Title> */}
-            <h1 className='text-5xl'>Hello instructor</h1>
+            <Title title='All Instructors'></Title>
             <div className='grid grid-cols-3 gap-4 mx-auto'>
                 {
                     instructors.map(instructor => <div key={instructor._key} className="card w-96 bg-slate-50 shadow-xl mx-auto">

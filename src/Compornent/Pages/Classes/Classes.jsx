@@ -12,7 +12,6 @@ const Classes = () => {
     }, [])
 
     return (
-        <zoom>
             <div className='my-12'>
                 {/* <Title title='All Classes'></Title> */}
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
@@ -24,7 +23,6 @@ const Classes = () => {
                     }
                 </div>
             </div>
-        </zoom>
     );
 };
 

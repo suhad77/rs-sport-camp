@@ -1,10 +1,10 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Elements } from "@stripe/react-stripe-js";
 import { Fragment } from "react";
-import Checkout from "./Checkout";
 import { loadStripe } from "@stripe/stripe-js";
+import Checkout from "./Chackout";
 
-const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK)
+const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gatway_PK)
 
 
 const Payment = ({ closeModal, isOpen, selectedClass }) => {

@@ -14,7 +14,6 @@ const MyClasses = () => {
         const res = await axiosSecure.get(`/myClasses?email=${user?.email}`)
         return res.data;
     })
-    console.log(myClasses);
 
     const handleEditClass = (event, cls) => {
         event.preventDefault();
