@@ -12,7 +12,7 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirm, setShowConfirm] = useState(false);
     const navigate = useNavigate();
-    const { googleSignIn, createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const [notMatch, setNotMatch] = useState('')
 
     const from = location.state?.from?.pathname || "/";
@@ -26,25 +26,7 @@ const Register = () => {
     };
 
 
-    const handleGoogleSignIn = () => {
-        googleSignIn()
-            .then(result => {
-                const loggedInUser = result.user;
-                console.log(loggedInUser);
-                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email, photo: loggedInUser.photoURL }
-                fetch('http://localhost:5000/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(saveUser)
-                })
-                    .then(res => res.json())
-                    .then(() => {
-                        navigate(from, { replace: true });
-                    })
-            })
-    }
+    
 
 
     const onSubmit = data => {
@@ -81,7 +63,7 @@ const Register = () => {
                                         'You clicked the button!',
                                         'success'
                                     )
-                                    navigate('/');
+                                    navigate(from, { replace: true });
                                     console.log(data);
                                 }
                             })
@@ -180,15 +162,6 @@ const Register = () => {
                                     <p>Already have an Account? <Link to="/login" className='text-blue-600 underline'>Login</Link></p>
                                 </label>
                             </form>
-                        </div>
-                        <div className="flex flex-col w-full border-opacity-50">
-                            <div className="divider">OR</div>
-                        </div>
-                        <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-                            <div className='px-8 mt-8 mx-auto'>
-                                <button onClick={handleGoogleSignIn} className="btn btn-circle btn-lg btn-outline mb-4 gap-2"><FaGoogle></FaGoogle></button>
-                                {/* <button onClick={handleGithubSignIn} className="btn btn-outline w-full mb-8 gap-2"><FaGithub></FaGithub> Register with GitHub</button> */}
-                            </div>
                         </div>
                     </div>
                 </div>
