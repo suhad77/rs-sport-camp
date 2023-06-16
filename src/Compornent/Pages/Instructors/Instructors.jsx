@@ -1,11 +1,9 @@
-// import  { useEffect, useState } from 'react';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import Title from '../../Title/Title';
+import { Helmet } from 'react-helmet';
 
 const Instructors = () => {
-    // useTitle('Instructors')
-    // const { user } = useAuth();
     const [axiosSecure] = useAxiosSecure();
     const { data: instructors = [], refetch } = useQuery(['instructors'], async () => {
         const res = await axiosSecure.get('/instructors')
@@ -17,6 +15,9 @@ const Instructors = () => {
 
     return (
         <div className='my-12'>
+            <Helmet>
+                <title>RsSportClub || Instructor</title>
+            </Helmet>
             <Title title='All Instructors'></Title>
             <div className='grid grid-cols-3 gap-4 mx-auto'>
                 {

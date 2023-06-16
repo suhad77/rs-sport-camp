@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useContext } from 'react';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import Title from '../../../Title/Title';
+import { Helmet } from 'react-helmet';
 
 const MyEnrolledClasses = () => {
 
@@ -17,6 +18,9 @@ const MyEnrolledClasses = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>RsSportClub || Enrole Classes</title>
+            </Helmet>
             <Title title='My Enrolled Classes'></Title>
             <div className="overflow-x-auto">
                 <table className="table">

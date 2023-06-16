@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import Title from '../../../Title/Title';
+import { Helmet } from 'react-helmet';
 
 const AddClass = () => {
     // useTitle('Dashboard | Add Class')
@@ -49,6 +50,9 @@ const AddClass = () => {
 
     return (
         <div className="px-16 my-12">
+            <Helmet>
+                <title>RsSportClub || Add A Class</title>
+            </Helmet>
             <Title title='Add a Class'></Title>
             <form onSubmit={handleAddClass}>
                 {/* form class name and image row */}

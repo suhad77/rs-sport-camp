@@ -2,6 +2,7 @@ import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 import Title from '../../../Title/Title';
+import { Helmet } from 'react-helmet';
 
 const ManageUsers = () => {
     const [axiosSecure] = useAxiosSecure();
@@ -64,6 +65,9 @@ const ManageUsers = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>RsSportClub || Manage Users</title>
+            </Helmet>
             <Title title='Manage Users'></Title>
 
             <div className="overflow-x-auto">

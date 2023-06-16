@@ -3,6 +3,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import Title from '../../../Title/Title';
 import FeedbackModal from './FeedbackModal';
+import { Helmet } from 'react-helmet';
 
 const ManageClasses = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
@@ -93,6 +94,9 @@ const ManageClasses = () => {
 
     return (
         <div className='my-12'>
+            <Helmet>
+                <title>RsSportClub || Manage Classes</title>
+            </Helmet>
             <Title title='Manage Classes'></Title>
             <div className="overflow-x-auto">
                 <table className="table">

@@ -4,6 +4,7 @@ import useInstructor from '../../Hooks/useInstructor';
 import { FaCashRegister, FaHistory, FaPlusSquare, FaRegBookmark, FaTachometerAlt, FaTasks, FaUserEdit } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 
 const Dashboard = () => {
@@ -26,6 +27,9 @@ const Dashboard = () => {
     </div>
     return (
         <div className='my-2'>
+            <Helmet>
+                <title>RsSportClub || Dashboard</title>
+            </Helmet>
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">

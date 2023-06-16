@@ -5,6 +5,7 @@ import Title from '../../../Title/Title';
 import { useContext } from 'react';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import SelectedClass from './SelectedClass';
+import { Helmet } from 'react-helmet';
 
 
 const SelectedClasses = () => {
@@ -49,6 +50,9 @@ const SelectedClasses = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>RsSportClub || Selected Classes</title>
+            </Helmet>
             <Title title='My Selected Class'></Title>
             <div className="overflow-x-auto">
                 <table className="table">

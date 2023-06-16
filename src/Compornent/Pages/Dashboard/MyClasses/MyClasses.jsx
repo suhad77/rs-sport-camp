@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { useContext } from 'react';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import Title from '../../../Title/Title';
+import { Helmet } from 'react-helmet';
 
 const MyClasses = () => {
     const { user } = useContext(AuthContext);
@@ -55,6 +56,9 @@ const MyClasses = () => {
 
     return (
         <div className='my-12'>
+            <Helmet>
+                <title>RsSportClub || My Classes</title>
+            </Helmet>
             <Title title='My Classes'></Title>
             <div className="overflow-x-auto">
                 <table className="table">
