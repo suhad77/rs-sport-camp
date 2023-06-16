@@ -5,7 +5,7 @@
 
 *  When a user clicks on the login button, they will be redirected to the login page and the user can login with their GitHub email password or Gmail to login.
 
-* 
+* The home page has a slider at the top, Paul's classes, popular instructors, and student count sections below the slider. bottom footer
 
 * 
 
