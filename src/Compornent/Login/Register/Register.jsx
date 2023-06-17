@@ -47,7 +47,7 @@ const Register = () => {
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email, photo: data.photoURL }
                         console.log(saveUser);
-                        fetch('https://rs-sport-camp-server.vercel.app/users', {
+                        fetch('https://rs-sport-camp-server-suhad77.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'

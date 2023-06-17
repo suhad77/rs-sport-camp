@@ -13,7 +13,7 @@ const ManageUsers = () => {
 
 
     const handleMakeAdmin = user => {
-        fetch(`https://rs-sport-camp-server.vercel.app/users/admin/${user._id}`, {
+        fetch(`https://rs-sport-camp-server-suhad77.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ const ManageUsers = () => {
 
 
     const handleMakeInstructor = user => {
-        fetch(`https://rs-sport-camp-server.vercel.app/users/instructor/${user._id}`, {
+        fetch(`https://rs-sport-camp-server-suhad77.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

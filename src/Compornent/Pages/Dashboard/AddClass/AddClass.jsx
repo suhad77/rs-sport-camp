@@ -26,7 +26,7 @@ const AddClass = () => {
         console.log(newClass);
 
         // send data to the server
-        fetch('https://rs-sport-camp-server.vercel.app/classes', {
+        fetch('https://rs-sport-camp-server-suhad77.vercel.app/classes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

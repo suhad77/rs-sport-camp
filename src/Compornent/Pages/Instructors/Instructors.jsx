@@ -10,7 +10,7 @@ const Instructors = () => {
         refetch();
         return res.data;
     })
-    
+
     console.log(instructors);
 
     return (
