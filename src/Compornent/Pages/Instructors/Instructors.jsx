@@ -19,7 +19,7 @@ const Instructors = () => {
                 <title>RsSportClub || Instructor</title>
             </Helmet>
             <Title title='All Instructors'></Title>
-            <div className='grid grid-cols-3 gap-4 mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto'>
                 {
                     instructors.map(instructor => <div key={instructor._key} className="card w-96 bg-slate-50 shadow-xl mx-auto">
                         <figure className="px-10 pt-10">

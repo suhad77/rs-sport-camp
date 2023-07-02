@@ -41,14 +41,14 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-4">
-                    <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                    {user? <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                         <div className="avatar">
                             <div className="w-12 rounded-full">
                                 <img src={`${user?.photoURL}`} />
                             </div>
                         </div>
-                    </div>
-                    {user ? <Link className="btn " onClick={handleLogOut}>Log Out</Link> : <li><Link to='/login'>Login</Link></li>}
+                    </div>: ''}
+                    {user ? <Link className="btn " onClick={handleLogOut}>Log Out</Link> : <li className="list-none"><Link className="btn " to='/login'>Login</Link></li>}
                 </div>
             </div>
         </div >
